@@ -19,8 +19,6 @@ jobs:
       run: bunx playwright install --with-deps
     - name: Build Page
       run: bun run build
-    - name: Launch Preview Page
-      run: bun run preview
     - name: Run Playwright tests
       run: bunx playwright test
     - uses: actions/upload-artifact@v3
