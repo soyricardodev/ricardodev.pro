@@ -1,4 +1,6 @@
 [![Deployment Pipeline](https://github.com/soyricardodev/ricardodev.pro/actions/workflows/pipeline.yml/badge.svg)](https://github.com/soyricardodev/ricardodev.pro/actions/workflows/pipeline.yml)
+[![Playwright Test](https://github.com/soyricardodev/ricardodev.pro/actions/workflows/playwright.yml/badge.svg)](https://github.com/soyricardodev/ricardodev.pro/actions/workflows/pipeline.yml)
+
 
 # Porfolio para programadores y desarrolladores
 
