@@ -1,0 +1,111 @@
+---
+import TextAnimation from "../TextAnimation.astro";
+---
+
+<div class="relative my-32">
+  <div class="container">
+    <div
+      class="relative z-10 mx-auto flex w-full flex-col items-center justify-center px-4 sm:px-0 md:w-[600px]"
+    >
+      <h1
+        class="mb-4 w-full text-center text-4xl font-bold text-white sm:text-5xl"
+      >
+        Hey, soy Ricardo.
+      </h1>
+      <p
+        style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d; opacity: 1;"
+        class="mb-8 text-pretty text-center text-xl font-medium"
+      >
+        +2 años de experiencia.
+        <TextAnimation>Desarrollador Web Full Stack</TextAnimation>
+        de Carabobo, Venezuela. Especializado en crear soluciones unicas.
+      </p>
+      <div class="flex gap-4">
+        <a
+          href="/contacto"
+          class="border-color-animation flex max-w-max items-center rounded-full bg-black/70 px-4 py-[6px] font-normal leading-6 text-white transition-colors hover:bg-transparent"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#fff"
+            class="button-icon"
+            viewBox="0 0 256 256"
+            ><path
+              d="M225.86,110.48,57.8,14.58A20,20,0,0,0,29.16,38.67l30.61,89.21L29.16,217.33A20,20,0,0,0,48,244a20.1,20.1,0,0,0,9.81-2.58l.09-.06,168-96.07a20,20,0,0,0,0-34.81ZM55.24,215.23,81,140h55a12,12,0,0,0,0-24H81.07L55.25,40.76l152.69,87.13Z"
+            ></path></svg
+          >
+          <span class="primary-button-text">Contactame</span></a
+        >
+        <a
+          href="/contacto"
+          class="flex max-w-max items-center rounded-full border-4 border-white/10 bg-white/10 px-4 py-[10px] font-normal leading-6 text-white backdrop-blur-lg transition-colors hover:border-white/20"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#fff"
+            viewBox="0 0 256 256"
+            class="mr-2 w-7"
+            ><path
+              d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+            ></path></svg
+          >
+
+          <span class="primary-button-text">Linkedin</span></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  h1 {
+    letter-spacing: -0.2px;
+  }
+
+  .primary-button-text {
+    font-size: 15px;
+  }
+
+  .button-icon {
+    width: 20px;
+    border-radius: 100%;
+    margin-right: 10px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .primary-button-text {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 767px) {
+    .display-1 {
+      width: 400px;
+      margin-bottom: 8px;
+      font-size: 48px;
+      line-height: 1.1;
+    }
+    .intro-block {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .display-paragraph {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .intro-block {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+</style>

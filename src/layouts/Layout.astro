@@ -1,10 +1,12 @@
 ---
 import "@fontsource-variable/onest";
+import "@fontsource/press-start-2p";
 
 import { ViewTransitions } from "astro:transitions";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import SEO_DEFAULTS from "@/constants/seo";
+import MouseTrailer from "@/components/MouseTrailer.astro";
 
 interface Props {
   title?: string;
@@ -16,7 +18,10 @@ const { description = SEO_DEFAULTS.description, title = SEO_DEFAULTS.title } =
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth font-sans motion-reduce:scroll-auto">
+<html
+  lang="es"
+  class="scroll-smooth font-sans [font-display:swap] motion-reduce:scroll-auto"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -28,50 +33,102 @@ const { description = SEO_DEFAULTS.description, title = SEO_DEFAULTS.title } =
   </head>
 
   <body
-    class="antialised relative flex min-h-[100dvh] flex-col overscroll-none text-stone-950/90 dark:text-stone-100"
+    class="antialised relative flex min-h-dvh flex-col overscroll-none text-neutral-950/90 dark:text-white"
   >
     <div
       class="absolute inset-y-0 z-[-2] min-h-screen w-full bg-neutral-100 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))] dark:bg-neutral-950
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#5073b850,rgba(0,0,0,80))]"
     >
     </div>
     <Header />
     <slot />
     <Footer />
+    <MouseTrailer />
     <style is:global>
       :root {
         color-scheme: light dark;
+        --font-logo: "Press Start 2P", system-ui, sans-serif;
+        --yellow: #f79533;
+        --orange: #f37055;
+        --pink: #ef4e7b;
+        --purple: #a166ab;
+        --blue: #5073b8;
+        --cyan: #1098ad;
+        --green: #07b39b;
+        --lime: #6fba82;
       }
 
-      #header-nav {
-        animation: blur linear both 0.5s;
-        animation-timeline: scroll();
-        animation-range: 0 500px;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @apply text-balance;
+      }
+
+      p {
+        @apply text-pretty;
       }
 
       @keyframes blur {
         to {
-          @apply backdrop-blur-xl border border-black bg-slate-50 px-3 py-1 flex flex-row items-center rounded-full;
+          @apply flex flex-row items-center rounded-full border border-black bg-slate-50 px-3 py-1 backdrop-blur-xl;
         }
       }
 
       @media (prefers-color-scheme: dark) {
         @keyframes blur {
           from {
-            @apply border-0
+            @apply border-0;
           }
           to {
             box-shadow:
               0px 5px 50px -5px rgba(0, 0, 0, 0.1),
               0px 0px 0 1px rgba(0, 0, 0, 0.3);
 
-            @apply bg-black/30 backdrop-blur-xl border border-black px-3 py-1 flex flex-row items-center rounded-full;
+            @apply flex flex-row items-center rounded-full border border-black bg-black/30 px-3 py-1 backdrop-blur-xl;
           }
         }
       }
 
-      .link-active {
-        @apply bg-white/40 font-semibold dark:bg-white/15 shadow-lg shadow-white/20 backdrop-blur-2xl;
+      .border-color-animation {
+        --borderWidth: 3px;
+        @apply relative;
+      }
+
+      .border-color-animation:after {
+        content: "";
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(
+          60deg,
+          var(--yellow),
+          var(--orange),
+          var(--pink),
+          var(--purple),
+          var(--blue),
+          var(--cyan),
+          var(--green),
+          var(--lime)
+        );
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        @apply absolute -z-10 rounded-full;
+      }
+
+      @keyframes animatedgradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
       }
     </style>
   </body>

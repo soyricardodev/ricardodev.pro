@@ -1,0 +1,130 @@
+<div id="trailer">
+  <!-- <i id="trailer-icon" class="gg-arrow-top-right"></i> -->
+</div>
+
+<script>
+  const trailer = document.getElementById("trailer")!;
+
+  function animateTrailer(e: MouseEvent, isInteracting: boolean = false) {
+    const x = e.clientX - trailer.offsetWidth / 2;
+    const y = e.clientY - trailer.offsetHeight / 2;
+
+    const keyframes = {
+      transform: `translate(${x}px, ${y}px) scale(${isInteracting ? 4 : 1})`,
+    };
+
+    trailer.animate(keyframes, {
+      duration: 800,
+      fill: "forwards",
+    });
+  }
+
+  // type TrailerType = "link" | "source";
+  // function getTrailerClass(type: TrailerType) {
+  //   switch (type) {
+  //     case "link":
+  //       return "gg-arrow-top-right";
+  //     case "source":
+  //       return "gg-code-slash";
+  //     default:
+  //       return "gg-arrow-top-right";
+  //   }
+  // }
+
+  window.addEventListener("mousemove", (e) => {
+    const interactable = (e.target as HTMLElement).closest(
+      ".interactable",
+    ) as HTMLElement;
+    const isInteracting = interactable !== null;
+    // const trailerIcon = document.getElementById("trailer-icon")!;
+
+    animateTrailer(e, isInteracting);
+
+    trailer.dataset.type = isInteracting ? interactable.dataset.type : "";
+
+    // if (isInteracting) {
+    // trailerIcon.className = getTrailerClass(
+    // interactable.dataset.trailer as TrailerType,
+    // );
+    // }
+  });
+</script>
+
+<style>
+  #trailer {
+    @apply pointer-events-none fixed z-[10000] flex size-5 items-center justify-center rounded-full bg-black opacity-0 transition-opacity duration-500 dark:bg-white;
+  }
+
+  #trailer:not([data-type=""]) > #trailer-icon {
+    @apply opacity-100;
+  }
+
+  #trailer-icon {
+    @apply text-[6px] leading-[4px] opacity-0 transition-opacity;
+  }
+
+  body:hover #trailer {
+    @apply opacity-100;
+  }
+
+  /* * Source: https://css.gg */
+  /* Arrow Top Right */
+  /* .arrow-top-right {
+    @apply relative block size-2 border-r-2 border-t-2 after:absolute after:right-[-3px] after:top-[3px] after:block after:h-0.5 after:w-[14px] after:rotate-45 after:bg-current;
+  } */
+  .gg-arrow-top-right {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid black;
+    transform: scale(1);
+    border-right: 2px solid black;
+  }
+  .gg-arrow-top-right::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    transform: rotate(-45deg);
+    top: 3px;
+    right: -3px;
+    @apply bg-black;
+  }
+
+  /* Code Slashed */
+  .gg-code-slash {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    transform: rotate(15deg) scale(var(--ggs, 1));
+    width: 2px;
+    height: 16px;
+    background: currentColor;
+  }
+  .gg-code-slash::after,
+  .gg-code-slash::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transform: rotate(-60deg);
+  }
+  .gg-code-slash::before {
+    border-left: 2px solid;
+    border-top: 2px solid;
+    left: -8px;
+    top: 5px;
+  }
+  .gg-code-slash::after {
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    right: -8px;
+    top: 3px;
+  }
+</style>

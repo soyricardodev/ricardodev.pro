@@ -1,15 +1,14 @@
 ---
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class="m-4 mx-auto mb-10 w-full rounded-lg bg-black/5 shadow backdrop-blur-lg xl:w-[1120px] dark:bg-black/20"
+  class="container m-4 mx-auto mb-10 flex w-full justify-center rounded-lg bg-black/5 shadow backdrop-blur-lg md:max-w-2xl lg:max-w-4xl dark:bg-black/20"
 >
   <div
-    class="mx-auto w-full max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+    class="mx-auto w-full max-w-screen-xl md:flex md:items-center md:justify-between"
   >
-    <span
-      class="text-sm text-yellow-800/90 sm:text-center dark:text-yellow-200/90"
+    <span class="text-sm text-zinc-800/90 sm:text-center dark:text-zinc-200/90"
       >© {currentYear}
       <a href="https://midu.dev/" class="hover:underline">midudev</a>. Casi
       todos los derechos reservados
@@ -21,7 +20,7 @@ const currentYear = new Date().getFullYear()
         <a href="/#sobre-mi" class="me-4 hover:underline md:me-6">Sobre mí</a>
       </li>
       <li>
-        <a href="#" class="hover:underline">Contacto</a>
+        <a href="mailto:miduga@gmail.com" class="hover:underline">Contacto</a>
       </li>
     </ul>
   </div>

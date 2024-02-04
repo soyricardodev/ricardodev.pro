@@ -1,10 +1,12 @@
 ---
-const personalImageAlt = "Miguel Ángel picture"
+const personalImageAlt = "Miguel Ángel";
 ---
 
-<article class="flex flex-col items-center justify-center gap-8 md:flex-row">
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 md:flex-row dark:text-gray-300"
+>
   <div
-    class="order-2 text-pretty md:order-1 [&>p>strong]:font-semibold [&>p>strong]:text-yellow-400 [&>p]:mb-4"
+    class="order-2 text-pretty md:order-1 [&>p>strong]:font-mono [&>p>strong]:font-normal [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p]:mb-4"
   >
     <p>
       Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la
@@ -30,8 +32,14 @@ const personalImageAlt = "Miguel Ángel picture"
     </p>
   </div>
 
-  <img src="/me.png" class="order-1 size-64 rounded-full md:order-2" alt={personalImageAlt}/>
-
+  <img
+    width="200"
+    height="200"
+    src="/me.png"
+    alt={personalImageAlt}
+    class="order-1 aspect-square h-full w-64 rotate-3 rounded-2xl bg-white object-cover p-1 ring-1 ring-white/20 md:order-2 lg:w-64 lg:p-2 dark:bg-yellow-500/5"
+    style="object-position: 50% 50%"
+  />
 </article>
 
 <!-- FRASES PROHIBIDAS EN VUESTRO PORTFOLIO
