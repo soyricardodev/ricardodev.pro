@@ -14,7 +14,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Onest Variable", ...fontFamily.sans],
-        logo: ["var(--font-logo)", ...fontFamily.sans],
       },
     },
   },
