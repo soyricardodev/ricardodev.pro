@@ -15,6 +15,19 @@ export default {
       fontFamily: {
         sans: ["Onest Variable", ...fontFamily.sans],
       },
+      // animation: {
+      //   "background-shine": "background-shine 2s linear infinite",
+      // },
+      // keyframes: {
+      //   "background-shine": {
+      //     from: {
+      //       backgroundPosition: "0 0",
+      //     },
+      //     to: {
+      //       backgroundPosition: "-200% 0",
+      //     },
+      //   },
+      // },
     },
   },
   plugins: [],

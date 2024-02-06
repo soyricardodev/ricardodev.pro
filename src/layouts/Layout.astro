@@ -32,13 +32,24 @@ const { description = SEO_DEFAULTS.description, title = SEO_DEFAULTS.title } =
   </head>
 
   <body
-    class="antialised relative flex min-h-dvh flex-col overscroll-none text-neutral-950/90 dark:text-white"
+    class="antialised relative flex min-h-dvh flex-col overflow-x-hidden overscroll-none text-neutral-950/90 dark:text-white"
   >
+    <div class="relative size-full bg-neutral-950">
+      <div
+        class="absolute bottom-0 left-[-10%] right-0 top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+      >
+      </div>
+      <div
+        class="absolute bottom-0 right-[-10%] top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+      >
+      </div>
+    </div>
     <div
-      class="absolute inset-y-0 z-[-2] min-h-screen w-full bg-neutral-100 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))] dark:bg-neutral-950
+      class="absolute inset-y-0 z-[-2] min-h-screen w-full bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))] dark:bg-neutral-950
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#5073b850,rgba(0,0,0,80))]"
     >
     </div>
+
     <Header />
     <slot />
     <Footer />

@@ -1,5 +1,7 @@
 ---
-const personalImageAlt = "Miguel Ángel";
+const personalImageAlt = "Ricardo Castro";
+import { me } from "@/assets";
+import { Image } from "astro:assets";
 ---
 
 <article
@@ -9,33 +11,36 @@ const personalImageAlt = "Miguel Ángel";
     class="order-2 text-pretty md:order-1 [&>p>strong]:font-mono [&>p>strong]:font-normal [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p]:mb-4"
   >
     <p>
-      Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la
-      programación con un Amstrad, tenía 10 años. Actualmente estoy <strong
-        >liderando equipos de desarrollo en multinacionales</strong
+      Me llamo Ricardo Castro. Empecé en la programación cuando tenia 11 años.
+      Actualmente estoy <strong
+        >trabajando como Full Stack Freelance Developer</strong
       >.
     </p>
 
     <p>
-      Algunos de mis éxitos incluyen <strong
-        >colaborar con Mozilla para el desarrollo de las primeras apps en su
-        sistema FirefoxOS</strong
-      >. Aunque hoy está desaparecido fue un gran avance en el mundo del
-      desarrollo web.
+      Mi viaje profesional me ha llevado desde trabajar de forma remota para una
+      agencia en México hasta desempeñarme presencialmente en Rhino, donde mi
+      crecimiento fue extraordinario. Con solo 17 años, ocupé el puesto <strong
+        >de Senior Full Stack Engineer</strong
+      >, un logro que refleja mi dedicación y capacidad para enfrentar desafíos
+      complejos.
     </p>
 
     <p>
-      Como creador de contenido, <strong
-        >cuento con el canal de habla hispana más visto del mundo en la
-        categoría de <em class="italic">Software & Game Development</em> en Twitch</strong
-      >. Mi objetivo es mejorar la empleabilidad de la comunidad hispana y el
-      acceso a contenido de calidad.
+      Hoy en día, soy un profesional freelance comprometido con la creación y
+      promoción de proyectos innovadores que contribuyen al avance tecnológico
+      en Venezuela. Mis proyectos han llegado a empresas de renombre, como
+      Chevron, y mi participación activa en proyectos de la comunidad me llena
+      de satisfacción. Un proyecto que me apasiona especialmente es LTaxis,
+      donde trabajamos incansablemente para mejorar el servicio de taxis en
+      Venezuela.
     </p>
   </div>
 
-  <img
+  <Image
     width="200"
     height="200"
-    src="/me.png"
+    src={me}
     alt={personalImageAlt}
     class="order-1 aspect-square h-full w-64 rotate-3 rounded-2xl bg-white object-cover p-1 ring-1 ring-white/20 md:order-2 lg:w-64 lg:p-2 dark:bg-yellow-500/5"
     style="object-position: 50% 50%"
