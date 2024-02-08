@@ -3,7 +3,7 @@ import Logo from "./Logo.astro";
 ---
 
 <!-- desktop -->
-<div class="nav">
+<div class="nav animate-fade-in">
   <a href="/" aria-current="page" class="logo-link w-inline-block w--current">
     <Logo />
   </a><div class="nav-list">
@@ -14,10 +14,16 @@ import Logo from "./Logo.astro";
       class="nav-item">Sobre mi</a
     >
   </div><div class="nav-buttons">
-    <a href="/contacto" class="button-secondary left w-inline-block">
+    <a
+      href="mailto:soyricardodev@proton.me"
+      class="button-secondary left w-inline-block"
+    >
       <div class="button-text">Contacto</div>
     </a>
-    <a href="/contacto" class="button-primary w-inline-block">
+    <a
+      href="mailto:soyricardodev@proton.me"
+      class="button-primary w-inline-block"
+    >
       <div class="button-text">Contacto</div>
     </a>
   </div>
@@ -35,7 +41,7 @@ import Logo from "./Logo.astro";
       class="logo-mobile w-inline-block w--current"><Logo /></a
     ><div class="mobile-nav-cta-flex">
       <a
-        href="/contacto"
+        href="mailto:soyricardodev@proton.me"
         class="button-secondary left float mobile w-inline-block"
         ><div class="button-text float">Contacto</div></a
       >
@@ -52,13 +58,15 @@ import Logo from "./Logo.astro";
     href="#experiencia"
     class="nav-item float">Experiencia</a
   ><a href="#proyectos" class="nav-item float">Proyectos</a><a
-    href="/contacto"
+    href="mailto:soyricardodev@proton.me"
     class="button-secondary-nav left float w-inline-block"
     ><div class="button-text float">Contacto</div></a
   >
   <div class="mobile-nav-cta-flex">
-    <a href="/contacto" class="nav-item float login">Contacto</a><a
-      href="/contacto"
+    <a href="mailto:soyricardodev@proton.me" class="nav-item float login"
+      >Contacto</a
+    ><a
+      href="mailto:soyricardodev@proton.me"
       class="button-secondary left float mobile w-inline-block"
     >
     </a><div></div>

@@ -148,9 +148,10 @@ const PROJECTS: {
         <div class="w-full md:w-1/2">
           <div class="relative col-span-6 row-span-5 flex flex-col items-center gap-8 text-clip rounded-xl shadow-xl transition duration-500 ease-in-out sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <Image
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              alt={`Screenshot del proyecto ${title}`}
               class="h-56 w-full object-cover object-top transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
+              decoding="async"
               src={image}
             />
           </div>
