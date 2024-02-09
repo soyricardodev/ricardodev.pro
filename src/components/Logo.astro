@@ -1,3 +1,7 @@
-<span class="text-xl font-black text-white">
-  {"<"}R{">"}
-</span>
+---
+import { Image } from "astro:assets";
+import { logobase32x32, logowhite32x32 } from "@/assets";
+---
+
+<Image src={logowhite32x32} alt="logo" class="hidden dark:block" />
+<Image src={logobase32x32} alt="logo" class="dark:hidden" />
