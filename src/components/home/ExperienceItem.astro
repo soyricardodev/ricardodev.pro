@@ -1,5 +1,5 @@
 ---
-import LinkInline from "./LinkInline.astro";
+import LinkInline from "../LinkInline.astro";
 
 export interface ExperienceProps {
   title: string;
@@ -9,7 +9,8 @@ export interface ExperienceProps {
   date: string;
 }
 
-const { title, company, description, link, date } = Astro.props;
+const { title, company, description, link, date } =
+  Astro.props as ExperienceProps;
 ---
 
 <div
@@ -31,7 +32,7 @@ const { title, company, description, link, date } = Astro.props;
     </div>
   </div>
   <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-600 md:col-span-3 dark:text-gray-300"
+    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
   >
     {description}
     {

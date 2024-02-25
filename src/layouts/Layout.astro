@@ -4,21 +4,28 @@ import "@fontsource-variable/onest";
 import { ViewTransitions } from "astro:transitions";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import SEO_DEFAULTS from "@/constants/seo";
 import MouseTrailer from "@/components/MouseTrailer.astro";
+
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+
+const i18n = getI18N({ currentLocale });
 
 interface Props {
   title?: string;
   description?: string;
 }
 
-const { description = SEO_DEFAULTS.description, title = SEO_DEFAULTS.title } =
-  Astro.props;
+const {
+  description = i18n.SEO.DESCRIPTION_INDEX,
+  title = i18n.SEO.TITLE_INDEX,
+} = Astro.props;
 ---
 
 <!doctype html>
 <html
-  lang="es"
+  lang={currentLocale}
   class="dark scroll-smooth font-sans [font-display:swap] motion-reduce:scroll-auto"
 >
   <head>
@@ -102,16 +109,17 @@ const { description = SEO_DEFAULTS.description, title = SEO_DEFAULTS.title } =
 
       .border-color-animation {
         --borderWidth: 3px;
+        z-index: revert-layer;
         @apply relative;
       }
 
-      .border-color-animation:after {
+      .border-color-animation::after {
         content: "";
         top: calc(-1 * var(--borderWidth));
         left: calc(-1 * var(--borderWidth));
         height: calc(100% + var(--borderWidth) * 2);
         width: calc(100% + var(--borderWidth) * 2);
-        background: linear-gradient(
+        background-image: linear-gradient(
           60deg,
           var(--yellow),
           var(--orange),
@@ -124,7 +132,9 @@ const { description = SEO_DEFAULTS.description, title = SEO_DEFAULTS.title } =
         );
         animation: animatedgradient 3s ease alternate infinite;
         background-size: 300% 300%;
-        @apply absolute -z-10 rounded-full;
+        position: absolute;
+        border-radius: 99999px;
+        z-index: -1;
       }
 
       @keyframes animatedgradient {

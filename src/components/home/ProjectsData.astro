@@ -1,19 +1,20 @@
 ---
+import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import GitHub from "./icons/GitHub.astro";
-import NextJS from "./icons/NextJS.astro";
-import Tailwind from "./icons/Tailwind.astro";
-import Typescript from "./icons/Typescript.astro";
-import Deno from "./icons/Deno.astro";
-import Google from "./icons/Google.astro";
-import Hono from "./icons/Hono.astro";
-import Medusa from "./icons/Medusa.astro";
-import Nodejs from "./icons/Nodejs.astro";
-import Postgres from "./icons/Postgres.astro";
-import Supabase from "./icons/Supabase.astro";
-import AstroIcon from "./icons/AstroIcon.astro";
-import Link from "./icons/Link.astro";
-import LinkButton from "./LinkButton.astro";
+import GitHub from "../icons/GitHub.astro";
+import NextJS from "../icons/NextJS.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Typescript from "../icons/Typescript.astro";
+import Deno from "../icons/Deno.astro";
+import Google from "../icons/Google.astro";
+import Hono from "../icons/Hono.astro";
+import Medusa from "../icons/Medusa.astro";
+import Nodejs from "../icons/Nodejs.astro";
+import Postgres from "../icons/Postgres.astro";
+import Supabase from "../icons/Supabase.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import Link from "../icons/Link.astro";
+import LinkButton from "../LinkButton.astro";
 
 import {
   projectDolary,
@@ -21,7 +22,13 @@ import {
   projectLtaxis,
   projectMedusa,
 } from "@/assets";
-import type { ImageMetadata } from "astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+
+const i18n = getI18N({ currentLocale });
+
+const projectsData = Object.values(i18n.PROJECTS);
 
 const TAGS = {
   NEXT: {
@@ -94,9 +101,8 @@ const PROJECTS: {
   github?: string;
 }[] = [
   {
-    title: "LTaxis - Revolucionando el transporte en Venezuela",
-    description:
-      "LTaxis es la solución de transporte que Venezuela estaba esperando. Desarrollada desde cero con Next.js, Tailwind CSS, Supabase y la API de Google Maps, esta plataforma es un 40% más rápida que la competencia y ofrece precios hasta un 30% mejores.",
+    title: projectsData[0].TITLE,
+    description: projectsData[0].DESCRIPTION,
     link: "https://ltaxis.vercel.app/",
     image: projectLtaxis,
     tags: [
@@ -108,17 +114,15 @@ const PROJECTS: {
     ],
   },
   {
-    title: "Dolary - La API de referencia para tasas de cambio en Venezuela",
-    description:
-      "Dolary es la respuesta a la necesidad de tasas de cambio rápidas y precisas en Venezuela. Desarrollada en Deno y Hono, esta API utiliza técnicas de scrapping para obtener los precios del dólar en el mercado paralelo y del BCV en tiempo récord, con tiempos de respuesta de 8ms a 32ms. En comparación, la competencia tarda de 6 segundos a 21 segundos para proporcionar solo una de estas tasas. ¡Dolary es flexible, rápida y superior en todos los sentidos!",
+    title: projectsData[1].TITLE,
+    description: projectsData[1].DESCRIPTION,
     link: "https://dolary.deno.dev/docs",
     image: projectDolary,
     tags: [TAGS.DENO, TAGS.HONO],
   },
   {
-    title: "Ally Calzados - Optimizando la gestión de ventas de una tienda",
-    description:
-      "Ally Calzados ahora cuenta con un sistema administrativo de vanguardia gracias al desarrollo basado en Medusa, TypeScript, Next.js, Node.js, Postgres y Tailwind CSS. He mejorado significativamente la gestión de roles, agregando estadísticas, analíticas y conectado con una facturadora. Además, trabajo en convertirlo en un sistema POS completo. Ally Calzados ha dado un gran paso adelante con esta solucion.",
+    title: projectsData[2].TITLE,
+    description: projectsData[2].DESCRIPTION,
     link: "https://allycalzado.up.railway.app/app/",
     image: projectMedusa,
     tags: [
@@ -131,9 +135,8 @@ const PROJECTS: {
     ],
   },
   {
-    title: "Enfoque Corporativo - Elevando el perfil de abogados en Venezuela",
-    description:
-      "Transforme la presencia en línea de Enfoque Corporativo, un bufete de abogados en Venezuela. Migrando desde WordPress a Astro, React, Tailwind y TypeScript, cree una página web un 80% más rápida y con una puntuación perfecta en Google Lighthouse. La nueva web de Enfoque Corporativo se destaca como la mejor en su categoría y refleja la excelencia legal que representan.",
+    title: projectsData[3].TITLE,
+    description: projectsData[3].DESCRIPTION,
     link: "https://enfoquecorporativo.com",
     image: projectEnfoque,
     tags: [TAGS.ASTRO, TAGS.TAILWIND],

@@ -1,0 +1,79 @@
+{
+  "SEO": {
+    "TITLE_INDEX": "Ricardo Castro's Portfolio - Full Stack Web Developer",
+    "DESCRIPTION_INDEX": "Discover Ricardo Castro's professional portfolio. A skilled Full Stack Web Developer specializing in creating bespoke and impactful web solutions. Explore projects, experience, and contact info.",
+    "TITLE_ERROR_404": "404 Page Not Found - Ricardo Castro's Portfolio",
+    "DESCRIPTION_ERROR_404": "Page not found (Error 404). Please check the URL or browse our sections. Need help? Contact us."
+  },
+  "NAV": {
+    "INDEX": "Home",
+    "EXPERIENCE": "Experience",
+    "PROJECTS": "Projects",
+    "ABOUT_ME": "About Me",
+    "CONTACT": "Contact",
+    "LOGO": "Ricardo Castro Web Developer Logo",
+    "LOGO_ARIA": "Go to the homepage of Ricardo Castro"
+  },
+  "HERO": {
+    "TITLE": "Hey, I'm Ricardo.",
+    "SUBTITLE": "+2 years of experience. ",
+    "SUBTITLE_ROLE": "Full Stack Web Developer",
+    "SUBTITLE_END": "from Carabobo, Venezuela. Specialized in crafting unique solutions.",
+    "CTA_CONTACT": "Contact Me",
+    "CTA_LINKEDIN": "LinkedIn"
+  },
+  "EXPERIENCE_TITLE": "Experience",
+  "EXPERIENCE": {
+    "FREELANCE": {
+      "TITLE": "Full Stack Web Developer",
+      "NAME": "Freelance",
+      "DATE": "Ongoing...",
+      "DESCRIPTION": "I've led the creation of diverse web solutions, from developing 'L Taxis', known as the Venezuelan Uber, to administrative systems for businesses and corporate websites. My guidance on agile development practices has optimized processes and outcomes. My focus is on delivering enhanced user experiences and tangible business results through customized and effective web solutions."
+    },
+    "RHINO": {
+      "TITLE": "Full Stack Web Developer",
+      "NAME": "Rhino Dev",
+      "DATE": "September 2022",
+      "DESCRIPTION": "I led the development team, adopting agile practices that sped up project delivery to high-profile clients like Chevron. We enhanced performance using modern JavaScript technologies and fostered the growth of a Junior developer, improving team productivity and quality."
+    },
+    "WSD": {
+      "TITLE": "Frontend Web Developer",
+      "NAME": "Web Digital Solutions",
+      "DATE": "March 2022",
+      "DESCRIPTION": "Responsible for a leap in efficiency, increasing customer service speed by 40% with a custom CRM and enhancing an 85% website performance by migrating from WordPress to React. I boosted client site performance by adopting modern technologies such as SSR and SSG, moving away from jQuery and WordPress, marking a before and after in service agility and quality."
+    }
+  },
+  "PROJECTS_TITLE": "Projects",
+  "PROJECTS": {
+    "LTAXIS": {
+      "TITLE": "LTaxis - Revolutionizing Transportation in Venezuela",
+      "DESCRIPTION": "LTaxis is the transportation solution Venezuela was waiting for. Developed from scratch with Next.js, Tailwind CSS, Supabase, and the Google Maps API, this platform is 40% faster than the competition and offers prices up to 30% better."
+    },
+    "DOLARY": {
+      "TITLE": "Dolary - The Go-To API for Currency Exchange Rates in Venezuela",
+      "DESCRIPTION": "Dolary is the answer to the need for fast and accurate exchange rates in Venezuela. Developed in Deno and Hono, this API uses scrapping techniques to obtain dollar prices from the parallel market and BCV in record time, with response times from 8ms to 32ms. In comparison, the competition takes from 6 seconds to 21 seconds to provide just one of these rates. Dolary is flexible, fast, and superior in every way!"
+    },
+    "ALLY": {
+      "TITLE": "Ally Calzados - Optimizing Sales Management for a Store",
+      "DESCRIPTION": "Ally Calzados now boasts a state-of-the-art administrative system thanks to development based on Medusa, TypeScript, Next.js, Node.js, Postgres, and Tailwind CSS. I significantly improved role management, adding statistics, analytics, and integrating with a billing system. Plus, I'm working on turning it into a complete POS system. Ally Footwear has taken a significant step forward with this solution."
+    },
+    "ENFOQUE": {
+      "TITLE": "Enfoque Corporativo - Raising the profile of lawyers in Venezuela",
+      "DESCRIPTION": "I transformed the online presence of Enfoque Corporativo, a law firm in Venezuela. Migrating from WordPress to Astro, React, Tailwind and TypeScript, create a website 80% faster and with a perfect Google Lighthouse score. Enfoque Corporativo's new website stands out as the best in its category and reflects the legal excellence they represent."
+    }
+  },
+  "ABOUT_ME": {
+    "TITLE": "About Me",
+    "PARAGRAPH_1": "My name is Ricardo Castro. I started programming when I was 11 years old. I am currently",
+    "PARAGRAPH_1_CTA": "working as a Full Stack Freelance Developer.",
+    "PARAGRAPH_2": "My professional journey has taken me from working remotely for an agency in Mexico to working on-site at Rhino, where my growth was extraordinary. At only 17 years old, I held the position of",
+    "PARAGRAPH_2_CTA": "Senior Full Stack Developer",
+    "PARAGRAPH_2_END": ", an achievement that reflects my dedication and ability to face complex challenges.",
+    "PARAGRAPH_3": "Today, I am a freelance professional committed to the creation and promotion of innovative projects that contribute to technological advancement in Venezuela. My projects have reached renowned companies, such as Chevron, and my active participation in community projects fills me with satisfaction. One project I am especially passionate about is LTaxis, where we work tirelessly to improve the cab service in Venezuela."
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Almost all rights reserved.",
+    "LINK_1": "About Me",
+    "LINK_2": "Contact"
+  }
+}

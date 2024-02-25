@@ -1,0 +1,22 @@
+---
+import ExperienceData from "./ExperienceData.astro";
+import SectionContainer from "../SectionContainer.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import { getI18N } from "@/i18n";
+import { useTranslations, getLangFromUrl } from "@/i18n/utils";
+
+const { currentLocale } = Astro;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const i18n = getI18N({ currentLocale });
+---
+
+<SectionContainer id={t("id.experiencia")}>
+  <h2 class="mb-6 flex items-center gap-x-3 text-3xl font-semibold">
+    <Briefcase class="size-7" />
+    {i18n.EXPERIENCE_TITLE}
+  </h2>
+  <ExperienceData />
+</SectionContainer>

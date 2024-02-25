@@ -1,19 +1,45 @@
 ---
 import Logo from "./Logo.astro";
+
+import {
+  useTranslatedPath,
+  getLangFromUrl,
+  useTranslations,
+} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const isEs = lang === "es";
+const indexPath = translatePath("/");
+const experiencePath = isEs
+  ? `#${translatePath("experiencia")}`
+  : translatePath("experiencia");
+const projectsPath = isEs
+  ? `#${translatePath("proyectos")}`
+  : translatePath("proyectos");
+const aboutMePath = isEs
+  ? `#${translatePath("sobre-mi")}`
+  : translatePath("sobre-mi");
 ---
 
 <!-- desktop -->
 <div class="nav animate-fade-in">
-  <a href="/" aria-current="page" class="flex items-center justify-center">
+  <a
+    href={indexPath}
+    aria-current="page"
+    class="flex items-center justify-center"
+  >
     <Logo />
   </a>
 
   <div class="flex items-center justify-center">
-    <a href="/" class="nav-item">Inicio</a>
-    <a href="#experiencia" class="nav-item">Experiencia</a>
-    <a href="#proyectos" class="nav-item">Proyectos</a><a
-      href="#sobre-mi"
-      class="nav-item">Sobre mi</a
+    <a href={indexPath} class="nav-item">{t("nav.inicio")}</a>
+    <a href={experiencePath} class="nav-item">{t("nav.experiencia")}</a>
+    <a href={projectsPath} class="nav-item">{t("nav.proyectos")}</a><a
+      href={aboutMePath}
+      class="nav-item">{t("nav.sobre-mi")}</a
     >
   </div>
 
@@ -22,7 +48,7 @@ import Logo from "./Logo.astro";
       href="mailto:soyricardodev@proton.me"
       class="flex items-center rounded-full border border-black/60 px-4 py-2 text-sm font-semibold leading-6 backdrop-blur-lg transition-colors hover:border-black/90 dark:border-white/10 dark:hover:border-white/20"
     >
-      Contacto
+      {t("nav.contacto")}
     </a>
   </div>
 </div>
@@ -30,18 +56,17 @@ import Logo from "./Logo.astro";
 <!-- mobile -->
 <div class="mobile-nav">
   <div class="mobile-nav-list-float">
-    <a href="#experiencia" class="nav-item float">Experiencia</a><a
-      href="#proyectos"
-      class="nav-item float">Proyectos</a
-    ><a href="#sobre-mi" class="nav-item float">Sobre mi</a><a
-      href="/"
-      aria-current="page"
-      class="logo-mobile"><Logo /></a
+    <a href={experiencePath} class="nav-item float">
+      {t("nav.experiencia")}</a
+    ><a href={projectsPath} class="nav-item float">{t("nav.proyectos")}</a><a
+      href={aboutMePath}
+      class="nav-item float">{t("nav.sobre-mi")}</a
+    ><a href={indexPath} aria-current="page" class="logo-mobile"><Logo /></a
     ><div class="mobile-nav-cta-flex">
       <a
         href="mailto:soyricardodev@proton.me"
         class="button-secondary left float mobile"
-        ><div class="button-text float">Contacto</div></a
+        ><div class="button-text float">{t("nav.contacto")}</div></a
       >
     </div>
   </div>
@@ -52,17 +77,17 @@ import Logo from "./Logo.astro";
   id="nav-float"
   class="nav-list-float float-hidden transition-all delay-300"
 >
-  <a href="/" class="nav-item float">Inicio</a><a
-    href="#experiencia"
-    class="nav-item float">Experiencia</a
-  ><a href="#proyectos" class="nav-item float">Proyectos</a><a
+  <a href={indexPath} class="nav-item float">{t("nav.inicio")}</a><a
+    href={experiencePath}
+    class="nav-item float">{t("nav.experiencia")}</a
+  ><a href={projectsPath} class="nav-item float">{t("nav.proyectos")}</a><a
     href="mailto:soyricardodev@proton.me"
     class="button-secondary-nav left float"
-    ><div class="button-text float">Contacto</div></a
+    ><div class="button-text float">{t("nav.contacto")}</div></a
   >
   <div class="mobile-nav-cta-flex">
     <a href="mailto:soyricardodev@proton.me" class="nav-item float login"
-      >Contacto</a
+      >{t("nav.contacto")}</a
     ><a
       href="mailto:soyricardodev@proton.me"
       class="button-secondary left float mobile"
@@ -139,7 +164,7 @@ import Logo from "./Logo.astro";
       @apply mr-3 border border-white/10 backdrop-blur-lg transition-colors hover:border-black/25 hover:shadow-none;
     }
     .button-secondary.left.float {
-      @apply mr-0 border border-white/60 bg-neutral-700 text-neutral-100 transition-colors hover:border-white/25 md:hidden dark:border-white/0 dark:bg-neutral-800;
+      @apply mr-0 border border-white/60 bg-neutral-700 text-neutral-100 transition-colors hover:border-white/25 dark:border-white/0 dark:bg-neutral-800 md:hidden;
     }
     .button-secondary.left.float.mobile {
       @apply flex md:hidden;

@@ -1,0 +1,79 @@
+{
+  "SEO": {
+    "TITLE_INDEX": "Porfolio de Ricardo Castro - Desarrollador Web Full Stack",
+    "DESCRIPTION_INDEX": "Descubre el portfolio profesional de Ricardo Castro. Desarrollador web especializado en crear soluciones web impactantes y a medida. Explora proyectos, experiencia e información de contacto.",
+    "TITLE_ERROR_404": "404 Página no encontrada  - Porfolio de Ricardo Castro",
+    "DESCRIPTION_ERROR_404": "Página no encontrada (Error 404). Verifica la URL o explora nuestras secciones. ¿Necesitas ayuda? Contáctenos."
+  },
+  "NAV": {
+    "INDEX": "Inicio",
+    "EXPERIENCE": "Experiencia",
+    "PROJECTS": "Proyectos",
+    "ABOUT_ME": "Sobre mi",
+    "CONTACT": "Contacto",
+    "LOGO": "Logo de Ricardo Castro Desarrollador Web",
+    "LOGO_ARIA": "Ir al inicio de la pagina de Ricardo Castro"
+  },
+  "HERO": {
+    "TITLE": "Hey, soy Ricardo.",
+    "SUBTITLE": "+2 años de experiencia. ",
+    "SUBTITLE_ROLE": "Desarrollador Web Full Stack",
+    "SUBTITLE_END": "de Carabobo, Venezuela. Especializado en crear soluciones unicas.",
+    "CTA_CONTACT": "Contactame",
+    "CTA_LINKEDIN": "Linkedin"
+  },
+  "EXPERIENCE_TITLE": "Experiencia laboral",
+  "EXPERIENCE": {
+    "FREELANCE": {
+      "TITLE": "Desarrollador Web Full Stack",
+      "NAME": "Freelance",
+      "DATE": "Actualmente...",
+      "DESCRIPTION": "He liderado la creación de soluciones web variadas, desde el desarrollo de 'L Taxis', conocido como el Uber Venezolano, hasta sistemas administrativos para comercios y sitios web corporativos. Mi asesoramiento a equipos sobre prácticas de desarrollo ágil ha optimizado procesos y resultados. Mi enfoque se centra en ofrecer experiencias de usuario mejoradas y resultados de negocio tangibles, a través de soluciones web personalizadas y efectivas."
+    },
+    "RHINO": {
+      "TITLE": "Desarrollador Web Full Stack",
+      "NAME": "Rhino Dev",
+      "DATE": "Septiembre 2022",
+      "DESCRIPTION": "Lideré el equipo de desarrollo, adoptando prácticas ágiles que aceleraron la entrega de proyectos a clientes de alto perfil como Chevron. Mejoramos el rendimiento utilizando tecnologías modernas de JavaScript y potencié el crecimiento de un desarrollador Junior, mejorando la productividad y calidad del equipo."
+    },
+    "WSD": {
+      "TITLE": "Desarrollador Web Frontend",
+      "NAME": "Web Soluciones Digitales",
+      "DATE": "Marzo 2022",
+      "DESCRIPTION": "Responsable de un salto en la eficiencia, aumentando un 40% la velocidad de atención al cliente con un CRM a medida y mejorando un 85% el rendimiento del sitio web empresarial al migrar de Wordpress a React. Impulsé el rendimiento de sitios cliente adoptando tecnologías modernas como SSR y SSG, desplazando el uso de jQuery y Wordpress, marcando un antes y un después en la agilidad y calidad del servicio ofrecido."
+    }
+  },
+  "PROJECTS_TITLE": "Proyectos",
+  "PROJECTS": {
+    "LTAXIS": {
+      "TITLE": "LTaxis - Revolucionando el transporte en Venezuela",
+      "DESCRIPTION": "LTaxis es la solución de transporte que Venezuela estaba esperando. Desarrollada desde cero con Next.js, Tailwind CSS, Supabase y la API de Google Maps, esta plataforma es un 40% más rápida que la competencia y ofrece precios hasta un 30% mejores."
+    },
+    "DOLARY": {
+      "TITLE": "Dolary - La API de referencia para tasas de cambio en Venezuela",
+      "DESCRIPTION": "Dolary es la respuesta a la necesidad de tasas de cambio rápidas y precisas en Venezuela. Desarrollada en Deno y Hono, esta API utiliza técnicas de scrapping para obtener los precios del dólar en el mercado paralelo y del BCV en tiempo récord, con tiempos de respuesta de 8ms a 32ms. En comparación, la competencia tarda de 6 segundos a 21 segundos para proporcionar solo una de estas tasas. ¡Dolary es flexible, rápida y superior en todos los sentidos!"
+    },
+    "ALLY": {
+      "TITLE": "Ally Calzados - Optimizando la gestión de ventas de una tienda",
+      "DESCRIPTION": "Ally Calzados ahora cuenta con un sistema administrativo de vanguardia gracias al desarrollo basado en Medusa, TypeScript, Next.js, Node.js, Postgres y Tailwind CSS. He mejorado significativamente la gestión de roles, agregando estadísticas, analíticas y conectado con una facturadora. Además, trabajo en convertirlo en un sistema POS completo. Ally Calzados ha dado un gran paso adelante con esta solucion."
+    },
+    "ENFOQUE": {
+      "TITLE": "Enfoque Corporativo - Elevando el perfil de abogados en Venezuela",
+      "DESCRIPTION": "Transforme la presencia en línea de Enfoque Corporativo, un bufete de abogados en Venezuela. Migrando desde WordPress a Astro, React, Tailwind y TypeScript, cree una página web un 80% más rápida y con una puntuación perfecta en Google Lighthouse. La nueva web de Enfoque Corporativo se destaca como la mejor en su categoría y refleja la excelencia legal que representan."
+    }
+  },
+  "ABOUT_ME": {
+    "TITLE": "Sobre mi",
+    "PARAGRAPH_1": "Me llamo Ricardo Castro. Empecé en la programación cuando tenia 11 años. Actualmente estoy",
+    "PARAGRAPH_1_CTA": "trabajando como Full Stack Freelance Developer.",
+    "PARAGRAPH_2": "Mi viaje profesional me ha llevado desde trabajar de forma remota para una agencia en México hasta desempeñarme presencialmente en Rhino, donde mi crecimiento fue extraordinario. Con solo 17 años, ocupé el puesto",
+    "PARAGRAPH_2_CTA": "de Senior Full Stack Developer",
+    "PARAGRAPH_2_END": ", un logro que refleja mi dedicación y capacidad para enfrentar desafíos complejos.",
+    "PARAGRAPH_3": "Hoy en día, soy un profesional freelance comprometido con la creación y promoción de proyectos innovadores que contribuyen al avance tecnológico en Venezuela. Mis proyectos han llegado a empresas de renombre, como Chevron, y mi participación activa en proyectos de la comunidad me llena de satisfacción. Un proyecto que me apasiona especialmente es LTaxis, donde trabajamos incansablemente para mejorar el servicio de taxis en Venezuela."
+  },
+  "FOOTER": {
+    "COPYRIGHT": "Casi todos los derechos reservados",
+    "LINK_1": "Sobre mi",
+    "LINK_2": "Contacto"
+  }
+}
